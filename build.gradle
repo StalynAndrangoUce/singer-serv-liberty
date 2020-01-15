@@ -1,0 +1,23 @@
+apply plugin: 'war'
+apply plugin: 'liberty'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.6.3'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile group:'javax.servlet', name:'javax.servlet-api', version:'4.0.1'
+    libertyRuntime group:'io.openliberty', name:'openliberty-runtime', version:'[17.0.0.4,)'
+    providedCompile group: 'jakarta.platform', name: 'jakarta.jakartaee-web-api', version: '8.0.0'
+	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.8'
+}

@@ -1,0 +1,9 @@
+<server description="Intro REST Guide Liberty server">
+<featureManager>
+  <feature>microProfile-3.0</feature>
+</featureManager>
+  <httpEndpoint httpPort="9501" httpsPort="9502"
+                id="defaultHttpEndpoint" host="*" />
+
+  <applicationManager autoExpand="true"/>
+</server>
